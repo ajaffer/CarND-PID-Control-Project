@@ -57,4 +57,4 @@ Twiddle=> reducing Twiddle Co-effecients 	P:0.8019	I:0.8019	D:0.8019
 Twiddle=> trying with PID Co-effecients 	P:1.019	I:0.891	D:8.119
 Twiddle=> error: 0.115226
 Twiddle=> reducing PID Co-effecients 	P:-0.5848	I:-0.7128	D:6.5152
-Twiddle=> trying with PID Co-effecients 	P:0	I:0	D:6.5152```
+Twiddle=> trying with PID Co-effecients 	P:0	I:0	D:6.5152
