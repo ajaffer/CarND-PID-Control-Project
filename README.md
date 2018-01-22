@@ -1,11 +1,4 @@
-# CarND-Controls-PID
-
-
----
-
-
-# Implementation
-
+# Controls-PID Implementation
 I wrote my twiddle version based on what was presented. I created a Twiddle-mode, when my algo will reset the simulator everytime the car runs out of the track, or if there are enough iterations of good driving done. I am able to get very good result, the final PID params chosen are:
 P:0.128	I:0.0001 D:7.22
 
