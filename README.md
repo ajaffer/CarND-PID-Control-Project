@@ -20,12 +20,22 @@ Even smoother movement than the D term.
 
 How the final hyperparameters were chosen:
 
-For initial starting values, I took the twiddle algorithm values from the quiz run: P = 2.9, I = 0.5, D = 10.0.  Then I wrote code to run the code in Twiddle mode: `pid.twiddle_mode`. In Twiddle mode the code will run `5000` iterations or if the Cross Track Error is too large. In Twiddle mode, I run the Twiddle algorithm to fine tune the PID co-effecients.  The following shows a sample output of this algorigth, as it tries to find the best value.
+For initial starting values, I took the twiddle algorithm values from the quiz run: P = 2.9, I = 0.5, D = 10.0.  Then I wrote code to run the code in Twiddle mode: `pid.twiddle_mode`. In Twiddle mode the code will run `5000` iterations or if the Cross Track Error is too large. In Twiddle mode, I run the Twiddle algorithm to fine tune the PID co-effecients.  The last section shows a sample output of this algorigth, as it tries to find the best value.
 
 Note: everytime the algo runs for more than 5000 iterations or runs out of the lane, it will restart.
 
 
-`Twiddle=> best PID Co-effecients 	P:2.9	I:0.5	D:10
+# Simulation
+Using the above algo, I was able to get these values, with the smallest error:
+
+`Twiddle=> trying with PID Co-effecients 	P:0.128	I:0	D:7.22
+Twiddle=> error: 6.16133e-06`
+
+I then added a small value to I term: 0.0001, with these values I am able to get very good results, I was able to run the whole track without any tire leaving the drivable portion of the track.
+
+
+# Twiddle - Sample output
+```Twiddle=> best PID Co-effecients 	P:2.9	I:0.5	D:10
 Twiddle=> trying with PID Co-effecients 	P:4	I:1.6	D:11.1
 Twiddle=> error: 0.260369
 Twiddle=> reducing PID Co-effecients 	P:1.8	I:-0.6	D:8.9
@@ -47,14 +57,4 @@ Twiddle=> reducing Twiddle Co-effecients 	P:0.8019	I:0.8019	D:0.8019
 Twiddle=> trying with PID Co-effecients 	P:1.019	I:0.891	D:8.119
 Twiddle=> error: 0.115226
 Twiddle=> reducing PID Co-effecients 	P:-0.5848	I:-0.7128	D:6.5152
-Twiddle=> trying with PID Co-effecients 	P:0	I:0	D:6.5152`
-
-
-
-# Simulation
-Using the above algo, I was able to get these values, with the smallest error:
-
-`Twiddle=> trying with PID Co-effecients 	P:0.128	I:0	D:7.22
-Twiddle=> error: 6.16133e-06`
-
-I then added a small value to I term: 0.0001, with these values I am able to get very good results, I was able to run the whole track without any tire leaving the drivable portion of the track.
+Twiddle=> trying with PID Co-effecients 	P:0	I:0	D:6.5152```
