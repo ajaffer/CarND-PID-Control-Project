@@ -8,15 +8,15 @@ Following describes the effect of the P, I, D component of the PID algorithm:
 
 P: Proportional Term
 Quick movement to reduce the error faster.
-![alt text](PZero.mov "Proportional Zero")
+[Proportional Zero](PZero.mov)
 
 D: Derivate Term
 For smoother movement, this is making the car turn in smoother movements.
-![alt text](DZero.mov "Derivate Zero")
+[Derivate Zero](DZero.mov)
 
 I: Integrate Term
 Even smoother movement than the D term.
-![alt text](IZero.mov "Integrate Zero")
+[Integrate Zero](IZero.mov)
 
 How the final hyperparameters were chosen:
 
